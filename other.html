@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test!</title>
+    <style>
+    body {
+        text-align: center;
+        font-family: monospace;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="s1">Skal vi oppføre oss i dag?</h1>
+
+    <p onclick="dS()">Nei!</p>
+
+    <div onclick="this.innerHTML='Ja!'">Ja?</div>
+    <div onclick="this.innerHTML='Nei!'">Ja?</div>
+    <div onclick="this.innerHTML='Ja!'">Ja?</div>
+
+    <p id="nope" onmouseover="testOnMouseOver()">Oi!!!</onmouseover>
+
+    <script>
+        function dS() {
+            document.getElementById('s1').innerHTML='>:(';
+        }
+        function testOnMouseOver() {
+            document.getElementById('nope').innerHTML += '<div><b>NEI!!!</b></div>';
+        }
+    </script>
+</body>
+</html>
