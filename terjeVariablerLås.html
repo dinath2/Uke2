@@ -6,31 +6,17 @@
 <body>
     <p>Dette skal bli en lås!</p>
 
-    <button onclick="tell1()">1</button>
-    <button onclick="tell2()">2</button>
-    <button onclick="tell3()">3</button>
+    <button onclick="tell(this)">1</button>
+    <button onclick="tell(this)">2</button>
+    <button onclick="tell(this)">3</button>
 
     <p>Trykk på knappene</p>
     <p id="tall"></p>
 
     <script>
-        function tell1() {
-            var textTall = '1';
+        function tell() {
             document.getElementById('tall').innerHTML =
-                textTall
-
-      }
-      function tell2() {
-            var textTall = '2';
-            document.getElementById('tall').innerHTML =
-                textTall
-
-      }
-      function tell3() {
-            var textTall = '3';
-            document.getElementById('tall').innerHTML =
-                textTall
-      }
+                'tall'
     </script>
 </body>
 </html>
