@@ -5,30 +5,31 @@
 </head>
 <body>
     <p>Dette skal bli en lås!</p>
-    <button onclick="tell()">1</button>
-    <button onclick="tell()">2</button>
-    <button onclick="tell()">3</button>
-    <button onclick="tell()">4</button>
-    <button onclick="tell()">5</button>
-    <button onclick="tell()">6</button>
-    <button onclick="tell()">7</button>
-    <button onclick="tell()">8</button>
-    <button onclick="tell()">9</button>
+
+    <button onclick="tell1()">1</button>
+    <button onclick="tell2()">2</button>
+    <button onclick="tell3()">3</button>
 
     <p>Trykk på knappene</p>
     <p id="tall"></p>
 
     <script>
-        function tell() {
-            var lock = 0;
-            var textLock = 'Lock';
-
-            lock++;
-            textLock += '';
-
+        function tell1() {
+            var textTall = '1';
             document.getElementById('tall').innerHTML =
-                'Lock' + textLock
+                textTall
 
+      }
+      function tell2() {
+            var textTall = '2';
+            document.getElementById('tall').innerHTML =
+                textTall
+
+      }
+      function tell3() {
+            var textTall = '3';
+            document.getElementById('tall').innerHTML =
+                textTall
       }
     </script>
 </body>
