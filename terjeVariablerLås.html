@@ -15,28 +15,21 @@
     <button onclick="tell()">8</button>
     <button onclick="tell()">9</button>
 
-    <p id="info">Trykk på knappen!</p>
+    <p>Trykk på knappene</p>
+    <p id="tall"></p>
 
     <script>
-        var tallA = 0;
-        var tekstA = 'TekstA ';
-        console.log(tallA, tekstA);
-
         function tell() {
-            var tallB = 0;
-            var tekstB = 'TekstB ';
+            var lock = 0;
+            var textLock = 'Lock';
 
-            tallA++;
-            tallB++;
-            tekstA += '*';
-            tekstB += '*';
+            lock++;
+            textLock += '';
 
-            document.getElementById('info').innerHTML =
-                'TallA=' + tallA +
-                '<br/>TallB=' + tallB +
-                '<br/>TekstA=' + tekstA +
-                '<br/>TekstB=' + tekstB;
-        }
+            document.getElementById('tall').innerHTML =
+                'Lock' + textLock
+
+      }
     </script>
 </body>
 </html>
