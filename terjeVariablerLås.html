@@ -12,7 +12,7 @@
 
     <p>Trykk på knappene</p>
     <p id="resultat"></p>
-    <button onclick="open()">Åpne</button>
+    <button onclick="open()">Åpne</button><br>
     <button onclick="reset()">Reset</button>
 
 
@@ -31,10 +31,10 @@
             document.getElementById('resultat').innerHTML += tallet.innerHTML;
         }
         function open() {
-
+            if( !correctCode.startsWith( enteredSoFar ) )
         }
         function reset() {
-            
+
         }
     </script>
 </body>
