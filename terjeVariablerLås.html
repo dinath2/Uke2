@@ -13,6 +13,7 @@
     <p>Trykk på knappene</p>
     <p id="resultat"></p>
     <button onclick="open()">Åpne</button>
+    <button onclick="reset()">Reset</button>
 
 
     <script>
@@ -22,12 +23,18 @@
 
         // view
         function view() {
-            
+
         }
 
         //controller
         function tell(tallet) {
             document.getElementById('resultat').innerHTML += tallet.innerHTML;
+        }
+        function open() {
+
+        }
+        function reset() {
+            
         }
     </script>
 </body>
