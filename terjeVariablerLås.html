@@ -6,16 +6,28 @@
 <body>
     <p>Dette skal bli en lås!</p>
 
-    <div><button onclick="tell(this)">1</button> <button onclick="tell(this)">2</button> <button onclick="tell(this)">3</button></div>
-    <div><button onclick="tell(this)">4</button> <button onclick="tell(this)">5</button> <button onclick="tell(this)">6</button></div>
-    <div><button onclick="tell(this)">7</button> <button onclick="tell(this)">8</button> <button onclick="tell(this)">9</button></div>
+    <button onclick="tell(this)">1</button> <button onclick="tell(this)">2</button> <button onclick="tell(this)">3</button><br>
+    <button onclick="tell(this)">4</button> <button onclick="tell(this)">5</button> <button onclick="tell(this)">6</button><br>
+    <button onclick="tell(this)">7</button> <button onclick="tell(this)">8</button> <button onclick="tell(this)">9</button><br>
 
     <p>Trykk på knappene</p>
-    <p id="tall"></p>
+    <p id="resultat"></p>
+    <button onclick="open()">Åpne</button>
+
 
     <script>
+        //model
+        var correctCode = '8521';
+        var enteredSoFar = '';
+
+        // view
+        function view() {
+            
+        }
+
+        //controller
         function tell(tallet) {
-            document.getElementById('tall').innerHTML += tallet.innerHTML;
+            document.getElementById('resultat').innerHTML += tallet.innerHTML;
         }
     </script>
 </body>
