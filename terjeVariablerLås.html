@@ -2,6 +2,16 @@
 <head>
     <meta charset="utf-8" />
     <title>Test</title>
+
+    <style>
+        button {
+            background-color: lightgray;
+            border: 2px, grey, solid;
+            border-radius: 5px;
+            margin: 2px 2px 2px 2px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
 </head>
 <body>
     <p>Dette skal bli en lås!</p>
@@ -12,29 +22,38 @@
 
     <p>Trykk på knappene</p>
     <p id="resultat"></p>
-    <button onclick="open()">Åpne</button><br>
-    <button onclick="reset()">Reset</button>
-
+    <button onclick="openLock()">Åpne</button><br>
 
     <script>
         //model
         var correctCode = '8521';
-        var enteredSoFar = innerHTML
+        var enteredSoFar = '';
 
         // view
-        function view() {
-
-        }
-
+        
         //controller
         function tell(tallet) {
             document.getElementById('resultat').innerHTML += tallet.innerHTML;
+            enteredSoFar += tallet.innerHTML;
+            if ((!enteredSoFar.startsWith(correctCode)) && (enteredSoFar.length > correctCode.length) ) {
+                resetLock();
+                tell(tallet);
+            }
         }
-        function open() {
-            if( !correctCode.startsWith( enteredSoFar ) )
-        }
-        function reset() {
 
+        function resetLock() {
+           document.getElementById('resultat').innerHTML = enteredSoFar = '';
+        }
+        
+        function openLock() {
+            if (enteredSoFar == correctCode) {
+                resetLock();
+                alert("Lås åpen! Hurra!");
+            }
+            else {
+                resetLock();
+                alert("Prøv igjen!")
+            }
         }
     </script>
 </body>
